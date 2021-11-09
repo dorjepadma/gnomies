@@ -1,37 +1,37 @@
 
 import GardenGnome from '../../assets/images/GardenGnome.jpeg'
-import { Container } from 'react-bootstrap'
+import { Container, Button } from 'react-bootstrap'
 import GnomeLaughing from '../../assets/audio/Gnome-Laughing.mp3'
+import ScytheGnome from '../../assets/images/scytheGnome2.png'
 
 
-import './homepage.styles.css';
+import './homepage.styles.scss';
 
 function Homepage() {
+  let audio = new Audio('../../assets/audio/Gnome-Laughing.mp3');
+
+  const start = () => {
+    audio.play()
+  }
+
   return (
     <div>
       <Container className='jumbotronContainer'>
-        <h1 >
+        <p className='jumboBanner' >
           Gnomies
-        </h1>
+        </p>
       </Container>
-      <div className="App-header">
-        <img src={GardenGnome} className="fade-out" alt="GardenGnome" />
-          <br />
-          <p>
+      <div className="body">
+        <img src={ScytheGnome} className="fade-out" alt="GardenGnome" />
+        <div>
+        <p className='fadeInText'>
             <strong>
             Legend has it they were Gnomes. 
             </strong>
           </p>
+       <Button className="jumboButton" src={GnomeLaughing} onClick={ () => audio.play() }> Coming Soon! </Button>
+        </div>
       </div>
-      <audio controls
-      allow="autoplay"
-      className='Gnome'
-      id="GnomeLaughter"
-      component="audio"
-      autoPlay='true'
-      hidden >
-        <source src={GnomeLaughing} type="audio/mpeg" volume='0.5'/>
-      </audio>
     </div>
   );
 }
