@@ -20,7 +20,7 @@ function Homepage() {
         <div>
         <p className='fadeInText'>
             <strong>
-            Legend has it they were Gnomes. 
+            Legend has it there are Gnomes. 
             </strong>
           </p>
 
