@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+
+import GardenGnome from './assets/images/GardenGnome.jpeg'
+import { Fade } from 'react-bootstrap'
+import Footer from './Components/footer/footer.component'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="App-header">
+
+        <h1 >
+          Gnomies
+        </h1>
+        <Fade in={true}>
+         
+        <img src={GardenGnome} className="fade-out" alt="GardenGnome" />
+        </Fade>
+          <br />
+          <p>
+            <strong>
+            Legend has it they were Gnomes. 
+            </strong>
+          </p>
+  
+      </div>
+      <Footer />
     </div>
   );
 }
