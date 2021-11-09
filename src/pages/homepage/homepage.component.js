@@ -1,6 +1,5 @@
-
-import GardenGnome from '../../assets/images/GardenGnome.jpeg'
-import { Container, Button } from 'react-bootstrap'
+import React from 'react';
+import { Container } from 'react-bootstrap'
 import ComingSoon from '../../Components/ComingSoon/ComingSoon.component';
 import ScytheGnome from '../../assets/images/scytheGnome2.png'
 
